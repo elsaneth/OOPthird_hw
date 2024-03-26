@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class HW3_ex1 {
+public class Suits3_ex1 {
     /**
      * Main method to demonstrate string manipulation operations.
      * Calls methods to find the most frequent character in a string and modify the string accordingly.

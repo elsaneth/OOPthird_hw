@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HW3_ex2 {
+public class Suits3_ex2 {
     /**
      * Main method to demonstrate file manipulation operations.
      * Reads data from the input file, processes it,
