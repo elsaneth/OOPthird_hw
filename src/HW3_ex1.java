@@ -2,25 +2,18 @@ import java.util.*;
 
 public class HW3_ex1 {
     public static void main(String[] args) {
-        String ln = " The years were 21155122222111!!!!";
+        /*
+        Calling out methods. If result for method findMostFrequentNr is null, then it does not
+        run other method.
+         */
+        String ln = "trrkrt kpsstVVrqqKKt !!!!!!!!!!!!";
         System.out.println("Intial String: " + ln);
         char mostFrequentNr = findMostFrequentNr(ln);
-        System.out.println("Most frequent nr: " + mostFrequentNr);
-        String modified = removeMostFrequentNumber(ln, mostFrequentNr);
-        System.out.println("Final String: " + modified);
-//        try {
-//            BufferedReader rd = new BufferedReader(new FileReader("src/inimesed.txt"));
-//            String ln = rd.readLine();
-//            while (ln != null) {
-//                System.out.println("Intial String: " + ln);
-//                char number = findMostFrequentNr(ln);
-//                System.out.println("The most frquent nr: " + number);
-//                System.out.println("Final String: " + removeMostFrequentNumber(ln, number));
-//                ln = rd.readLine();
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        if (mostFrequentNr != '\0') {
+            System.out.println("Most frequent nr: " + mostFrequentNr);
+            String modified = removeMostFrequentNumber(ln, mostFrequentNr);
+            System.out.println("Final String: " + modified);
+        }
     }
 
     public static char findMostFrequentNr(String line) {
@@ -33,6 +26,10 @@ public class HW3_ex1 {
             if (Character.isDigit((line.charAt(i)))) {
                 numbers.add(line.charAt(i));
             }
+        }
+        if (numbers.isEmpty()) {
+            System.out.println("No numbers in this string!");
+            return '\0';
         }
 
         /*
